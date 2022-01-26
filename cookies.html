@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="crear">Crear</button>
+    <button id="mostrar">Mostrar</button>
+    <button id="modificar">Modificar</button>
+    <button id="eliminar">Eliminar</button>
+
+    <script>
+        document.getElementById("crear").addEventListener("click", crear)
+        document.getElementById("mostrar").addEventListener("click", mostrar)
+        document.getElementById("modificar").addEventListener("click", modificar)
+        document.getElementById("eliminar").addEventListener("click", eliminar)
+/*
+        function crear(){
+            sessionStorage.setItem("usuario", "Andres");
+            sessionStorage.setItem("email", "andres@hotmail.com");
+        }
+        function mostrar(){
+            alert("Usuario: " + sessionStorage.getItem("usuario") + " Correo: " + sessionStorage.getItem("email") );
+        }
+        function modificar(){
+            sessionStorage.setItem("usuario", "AndresPiedra");
+        }
+        function eliminar(){
+            sessionStorage.removeItem("usuario", "Andres");
+            sessionStorage.removeItem("email", "andres@hotmail.com");
+        }
+        */
+        function crear(){
+            document.cookie = "usuario=andres; expires=Wed, 15 Dec 2021 12:00:00 UTC; path=/;";
+        }
+        function mostrar(){
+            alert(document.cookie);
+        }
+        function modificar(){
+            document.cookie = "usuario=Juan; expires=Tue, 14 Dec 2021 12:00:00 UTC; path=/;";
+        }
+        function eliminar(){
+            document.cookie = "expires=Tue, 14 Dec 2020 12:00:00 UTC; path=/;";
+        }
+
+    </script>
+    
+</body> 
+</html>
