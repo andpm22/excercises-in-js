@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ej3Operadores.js" defer></script>
+</head>
+<body>
+    <h1>Tidpos de Operadores</h1>
+    <form id="formulario">
+        <p>
+            Numero 1: <input type="text" id="numeroUno" name="numeroUno">
+            <button type="button" id="incremento" name="incremento" onclick="incrementar()">++</button>
+        </p>
+        <p>
+            Numero 2: <input type="text" id="numeroDos" name="numeroDos">
+            <button type="button" id="disminuye" name="disminuye" onclick="restar()">--</button></p>
+        <!-- > Test */<p><button type="button" id="operacion" name="operacion" onclick="resultadoOperacion(numeroUno.value,numeroDos.value)">Operacion</button></p>-->
+        <p><button type="button" id="operacion" name="operacion" onclick="comparacion()">Operacion</button></p>
+
+        <p>Resultado: <input type="text" id="resultado" name="resultado"></p>
+    </form>
+    
+</body>
+</html>
